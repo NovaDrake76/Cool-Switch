@@ -31,7 +31,7 @@ const App: React.FC = () => {
         disabled={disableSwitch}
         darkMode={darkMode}
       />
-      <div className="flex mt-4 gap-2">
+      <div className="flex mt-4 gap-2 flex-col md:flex-row">
         {buttons.map((button, index) => {
           return (
             <button
