@@ -1,8 +1,7 @@
 // Switch.tsx
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import { FaList } from "react-icons/fa";
-import { BsGridFill } from "react-icons/bs";
+import { BsGridFill, BsList } from "react-icons/bs";
 
 type StateType = "list" | "grid";
 
@@ -63,7 +62,7 @@ const CoolSwitch: React.FC<SwitchProps> = ({
               leaveTo="opacity-0"
             >
               {item === "list" ? (
-                <FaList
+                <BsList
                   className={`absolute top-2 right-2 text-3xl ${
                     !darkMode ? "text-[#585858]" : "text-[#fdfbf7]"
                   } `}
@@ -89,9 +88,9 @@ const CoolSwitch: React.FC<SwitchProps> = ({
         } h-8 border-2 ${
           color === "blue"
             ? darkMode
-              ? "border-[#294198] bg-[#4b6eee]"
-              : "border-[#87a1ff] bg-[#5269bc]"
-            : "border-[#C4797D] bg-[#df4d55]"
+              ? "border-[#294198] bg-[#4b6eee] hover:bg-[#617fe9]"
+              : "border-[#87a1ff] bg-[#5269bc] hover:bg-[#6b89f3]"
+            : "border-[#C4797D] bg-[#df4d55] hover:bg-[#e16f75]"
         }   top-2 left-2 transform transition-all duration-300 ${
           disabled ? "cursor-auto" : "cursor-pointer"
         } ${isOpen ? (darkMode ? "translate-x-14" : "translate-x-14") : ""}`}
